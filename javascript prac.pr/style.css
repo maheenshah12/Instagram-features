@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    /* background-color: rgb(20, 133, 64); */
+    background: linear-gradient(135deg, 
+        rgb(131, 58, 180), /* Purple */
+        rgb(66, 103, 178), /* Blue */
+        rgb(42, 182, 252), /* Turquoise */
+        rgb(249, 91, 142), /* Pink */
+        rgb(255, 176, 41)   /* Yellow */
+      );
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+#card{
+    height: 450px;
+    width: 300px;
+    background-color:rgb(31, 31, 25);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid rgb(31, 31, 25) ;
+    position: relative;
+    overflow-y: auto;
+}
+#card::-webkit-scrollbar{
+    display: none;
+ }
+
+#storiyan{
+     height: 120px;
+     width: 100%;
+     border-bottom: 1px solid rgb(31, 31, 25);
+     /* background-color: red; */
+     padding: 15px;
+     white-space: nowrap;
+     overflow-x: auto;
+     overflow-y:hidden;
+     
+}
+#storiyan::-webkit-scrollbar{
+   display: none;
+}
+.story{
+    /* background-color: rgb(141, 111, 168); */
+    border: 2px solid rgb(0, 170, 14);
+    height: 90px;
+    border-radius: 50%;
+    width: 90px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5px;
+}
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 50%; */
+}
+ 
+#full-screen{
+    height: 100%;
+   width:100%;
+   background-size: cover;
+   background-position: center;
+    position: absolute;
+    display: none;
+}
+.post{
+    width: 100px;
+    height: 100px;
+    /* background-color: aquamarine; */
+    position: relative;
+    
+}
+.post img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+.text-overlay{
+    position: absolute; /* Positioning it over the image */
+    top: 20%; /* Center vertically */
+    left: 90%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    color: white; /* Text color */
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:500; 
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Optional: Text shadow for better readability */
+    text-align: center; /* Center text horizontally */
+    padding: 10px; /* Padding around the text */
+}
+.round{
+    /* background-color: rgb(23, 92, 92); */
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgb(49, 9, 112);
+    position: absolute;
+    top: 30%; /* Center vertically */
+    left: 30%;
+    border-radius: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.round img{
+    margin-top: -9px;
+    margin-left: -10px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    /* object-position: center; */
+    border-radius: 50%;
+}
+.post i{
+    color: white;
+    font-size: 75px;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    /* transform: translate(-50%,-50%); */
+    transform: scale(0);
+    opacity: 0;
+    transition: transform ease 0.5s;
+}
+.header{
+    background: linear-gradient(135deg, 
+    rgb(131, 58, 180), /* Purple */
+    rgb(66, 103, 178), /* Blue */
+    rgb(42, 182, 252), /* Turquoise */
+    rgb(249, 91, 142), /* Pink */
+    rgb(255, 176, 41)   /* Yellow */
+  );
+    width: 300px;
+    height: 50px;
+}
+.header h3{
+    color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
